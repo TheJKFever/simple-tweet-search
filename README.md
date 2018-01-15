@@ -58,6 +58,12 @@ npm run react
 ```
 
 
+Screen shot
+----
+
+![](http://g.recordit.co/z1yEsHEw4g.gif)
+
+
 Development TODO List:
 ----
  - [x] Create Mongo database.

@@ -26,13 +26,13 @@
 }
 
 .tweet-item {
-  box-sizing: content-box;
+  box-sizing: border-box;
   background-color: rgba(231, 230, 243, 0.7);
   display: inline-block;
   font-size: 16px;
   min-height: 100px;
-  width: 32%;
-  margin: 10px;
+  width: 33%;
+  border: solid rgb(0, 188, 212) 10px;
   position: relative;
 }
 
@@ -52,6 +52,7 @@
   bottom: 0;
   display: block;
   font-size: 14px;
+  width: 100%;
   left: 50%;
   margin: 10px 0;
   position: absolute;
@@ -59,9 +60,6 @@
 }
 
 /* SEARCH BAR */
-.search-bar-container {
-}
-
 .search-bar-input {
   width: 200px;
   line-height: 21px;
@@ -80,4 +78,16 @@
   display: inline-block;
   font-size: 16px;
   margin-left: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+  .tweet-item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .tweet-item {
+    width: 100%;
+  }
 }
