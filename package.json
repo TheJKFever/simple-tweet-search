@@ -14,7 +14,7 @@
     "deploy": "pm2 start deploy.json",
     "dev": "NODE_ENV=dev nodemon -e js ./server/index.js --exec babel-node --presets es2015,stage-2 --ignore ./server/__test__/ --ignore ./react/ --ignore ./scripts/",
     "buildServer": "babel ./server -s -D -d dist",
-    "buildReact": "cd react && npm run build && mv build ../dist/public",
+    "buildReact": "cd react && npm install && npm install --only=dev && npm run build && mv build ../dist/public",
     "react": "node ./scripts/reactDev",
     "populate-db": "mongoimport data/assignment_tweet.csv --db tweetSearch --collection tweets --headerline --type csv"
   },
@@ -25,7 +25,9 @@
     "helmet": "^3.8.0",
     "mongoose": "^4.13.9",
     "morgan": "^1.8.2",
-    "serve-favicon": "^2.4.3"
+    "react-dom": "^16.2.0",
+    "serve-favicon": "^2.4.3",
+    "twitter-search-react": "file:react"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -35,8 +37,7 @@
     "concurrently": "^3.5.0",
     "eslint": "^4.3.0",
     "jest": "^20.0.4",
-    "nodemon": "^1.12.1",
-    "react-script": "^2.0.5"
+    "nodemon": "^1.12.1"
   },
   "jest": {
     "verbose": true,
