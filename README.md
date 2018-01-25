@@ -29,9 +29,19 @@ mongod
 
 Populate the databse:
 
+There's two options to populate the DB. Assuming you have the CSV pre-parsed file, you can use mongoimport like so:
+
 ```
 npm run populate-db
 ```
+
+Otherwise, you can use the python populate script.
+Note: This requires pymongo, which can be installed using `pip install pymongo`.
+
+```
+python scripts/populate_db.py
+```
+
 
 Run application:
 
